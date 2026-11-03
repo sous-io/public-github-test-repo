@@ -1,6 +1,6 @@
 {
   "formatVersion": 1,
-  "generatedAt": "2026-11-03T07:09:08.014Z",
+  "generatedAt": "2026-11-03T07:12:06.498Z",
   "generator": "1.0.8",
   "name": "e2e-demo",
   "namespaces": {
@@ -117,6 +117,22 @@
           "releasedAt": "2026-11-03T07:09:08.014Z",
           "subscribes": [],
           "tag": "e2e/e2emw0cius8n22publicgithub@0.0.1",
+          "variables": []
+        }
+      }
+    },
+    "e2e/e2emw0cius8n24publicgithub": {
+      "description": "One paragraph saying what this recipe gives a project that subscribes to it.",
+      "path": "recipes/e2e/e2emw0cius8n24publicgithub",
+      "versions": {
+        "0.0.1": {
+          "dependencies": {},
+          "depends": [],
+          "hash": "sha256-a5a732f70d4229e285384cf82f5923ba23559b5ca1a0a8cf57ec3e52008b1d36",
+          "prerelease": false,
+          "releasedAt": "2026-11-03T07:12:06.498Z",
+          "subscribes": [],
+          "tag": "e2e/e2emw0cius8n24publicgithub@0.0.1",
           "variables": []
         }
       }
