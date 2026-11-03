@@ -1,6 +1,6 @@
 {
   "formatVersion": 1,
-  "generatedAt": "2026-11-03T06:32:52.102Z",
+  "generatedAt": "2026-11-03T06:33:08.557Z",
   "generator": "1.0.2",
   "name": "e2e-demo",
   "namespaces": {
@@ -8,5 +8,22 @@
       "description": "What the recipes in this namespace have in common."
     }
   },
-  "recipes": {}
+  "recipes": {
+    "e2e/example": {
+      "description": "One paragraph saying what this recipe gives a project that subscribes to it.",
+      "path": "recipes/e2e/example",
+      "versions": {
+        "0.1.0": {
+          "dependencies": {},
+          "depends": [],
+          "hash": "sha256-89f321c7af07ad5f4b9b0e7e84913baf4936b7966e1111a0f01484912c337621",
+          "prerelease": false,
+          "releasedAt": "2026-11-03T06:33:08.557Z",
+          "subscribes": [],
+          "tag": "e2e/example@0.1.0",
+          "variables": []
+        }
+      }
+    }
+  }
 }
