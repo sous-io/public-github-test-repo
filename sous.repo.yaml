@@ -30,3 +30,4 @@ namespaces:
 recipes:
   - recipes/e2e/example
   - recipes/e2e/e2emw0bbtwxn24publicgithub
+  - recipes/e2e/e2emw0bdkknn24publicgithub
