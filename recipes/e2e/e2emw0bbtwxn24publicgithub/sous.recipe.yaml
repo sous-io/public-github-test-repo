@@ -1,0 +1,77 @@
+# A recipe manifest: one publishable unit, with its own version.
+#
+# Copy this folder to start a new recipe, then add its path to the 'recipes'
+# list in the sous.repo.yaml at the root of this repository.
+
+formatVersion: 1
+
+namespace: e2e
+name: e2emw0bbtwxn24publicgithub
+
+# Recipe metadata is the source of truth for versions. 'sous repo release'
+# bumps this field and keeps the matching git tag consistent with it.
+version: 0.0.1
+
+description: >-
+  One paragraph saying what this recipe gives a project that subscribes to it.
+
+# Build dependencies: fetched, pinned and addressable from this recipe's own
+# files, but their files do NOT enter a subscriber's output.
+# depends:
+#   - core/shared-partials@^1.0.0
+
+# Co-subscriptions: subscribing to this recipe subscribes the project to these
+# as well, in full. Their questions run and their files DO enter the output.
+# subscribes:
+#   - workflow/task-files
+
+# The files this recipe contributes, grouped by what they are. Paths are
+# relative to this folder.
+contents:
+  - kind: skills
+    include:
+      - skills/**/*.md
+
+# Variables this recipe needs answered. A definition is a specification, never a
+# value: sous asks the question only when a subscribed recipe needs the variable
+# and no valid answer is already in scope.
+#
+# Every definition must carry a 'description' and an 'example'. The description
+# is the paragraph shown above the question and by 'sous vars show <name>'; it
+# says, in full sentences, what the setting is for, what the default does, and
+# what else is acceptable. The prompt is one plain question, nothing more. The
+# example is a realistic sample answer, shown with the question so nobody has to
+# guess what a good one looks like; it is documentation only and is never
+# stored, so use 'default' for a value a project should actually start with.
+#
+# variables:
+#   - name: apiBaseUrl
+#     type: url
+#     prompt: Which API should this project talk to?
+#     description: >-
+#       Every request this recipe generates is sent to one deployment of the API,
+#       and this setting says which one. The default points at the public
+#       production host, but any deployment you can reach works, including a
+#       staging host or a service running on your own machine.
+#     example: https://api.example.com
+#     default: https://api.example.com
+#     required: true
+#
+#   - name: serviceToken
+#     type: string
+#     # Name an environment variable explicitly to reuse a value the environment
+#     # already carries. When omitted, 'sous repo release' derives one.
+#     env: SERVICE_TOKEN
+#     prompt: What is this project's service token?
+#     description: >-
+#       This recipe authenticates every call it makes with a service token, which
+#       is issued per project and is not shared between them. Create one under
+#       Settings, then Tokens, and give it read access to the project you are
+#       configuring. There is no default; a token is always specific to you, and
+#       it is stored in the gitignored env file so it never reaches git.
+#     example: svc_0123456789abcdef0123
+#     # A secret is always written to the gitignored '.sous/.env.local'.
+#     secret: true
+#     scope: local
+#     validate:
+#       minLength: 20

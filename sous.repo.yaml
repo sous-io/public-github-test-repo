@@ -29,3 +29,4 @@ namespaces:
 # folder holds one 'sous.recipe.yaml'.
 recipes:
   - recipes/e2e/example
+  - recipes/e2e/e2emw0bbtwxn24publicgithub
