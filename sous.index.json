@@ -1,0 +1,12 @@
+{
+  "formatVersion": 1,
+  "generatedAt": "2026-11-03T06:32:52.102Z",
+  "generator": "1.0.2",
+  "name": "e2e-demo",
+  "namespaces": {
+    "e2e": {
+      "description": "What the recipes in this namespace have in common."
+    }
+  },
+  "recipes": {}
+}

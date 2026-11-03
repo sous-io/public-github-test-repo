@@ -1,0 +1,31 @@
+# The repo manifest: what this repository publishes.
+#
+# It is data, never code: sous reads it before anything is downloaded, so a
+# project can browse and validate what this repository publishes, and decide
+# whether to trust it, without executing anything.
+
+formatVersion: 1
+
+# A suggested short name. Each project chooses the name it actually uses when it
+# runs 'sous repo add', so two repositories suggesting the same name never clash.
+name: e2e-demo
+
+description: >-
+  One paragraph saying what this repository publishes and who it is for.
+
+# Where to send a change. Shown to anyone whose provider cannot open a proposal
+# for them, so a contributor is never left without a route. Point it at this
+# repository's CONTRIBUTING.md once the repository has a public URL.
+# contribute: https://<host>/<owner>/e2e-demo/blob/main/CONTRIBUTING.md
+
+# Namespaces group recipes. They are not versioned, and a project may subscribe
+# to a whole namespace, which means every recipe in it, including ones published
+# later.
+namespaces:
+  e2e:
+    description: What the recipes in this namespace have in common.
+
+# Every recipe folder in this repository, as a path relative to this file. Each
+# folder holds one 'sous.recipe.yaml'.
+recipes:
+  - recipes/e2e/example
